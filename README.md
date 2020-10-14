@@ -1,5 +1,5 @@
 # REACTJS-TodoApp
-Todo Application in ReactJS using state
+Todo Application in ReactJS using state and Class component
 
 
-Developed By Muhammad Sameem
+&copy; 2020 Developed By Muhammad Sameem
