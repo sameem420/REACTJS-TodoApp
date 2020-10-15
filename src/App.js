@@ -16,6 +16,12 @@ class App extends React.Component {
       value: ''
     })
   }
+  deleteTodo = (index) => {
+    this.state.todos.splice(index,1)
+    this.setState({
+      todos: this.state.todos
+    })
+  }
 
   render(){
     let {todos, value} = this.state;
@@ -25,7 +31,9 @@ class App extends React.Component {
       <button onClick={this.addTodo}>Add Todo</button>
       <ul>
       {todos.map((val,index) => {
-        return  <li key={index}>{val}</li>     
+        return  <li key={index}>{val}
+        <button onClick={() => this.deleteTodo(index)}>Delete</button>
+        </li>     
       })}
       </ul>
     </div>
