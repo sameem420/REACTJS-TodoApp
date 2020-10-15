@@ -6,13 +6,15 @@ class App extends React.Component {
   super()
     this.state = {
       todos : [],
-      value : ''
+      value : '',
+      
     }
   }
 
   addTodo = () => {
+    let val = {title: this.state.value}
     this.setState({
-      todos: [...this.state.todos, this.state.value],
+      todos: [...this.state.todos, val],
       value: ''
     })
   }
@@ -23,7 +25,22 @@ class App extends React.Component {
     })
   }
   editTodo = (index) => {
-    console.log("this is edit")
+    this.state.todos[index].edit = true;
+    this.setState({
+      todos: this.state.todos
+    })
+  }
+  handleChange = (e,index) => {
+    this.state.todos[index].title = e.target.value;
+    this.setState({
+      todos: this.state.todos
+    })
+  }
+  updateTodo = (index) => {
+    this.state.todos[index].edit = false;
+    this.setState({
+      todos: this.state.todos
+    })
   }
 
   render(){
@@ -34,8 +51,12 @@ class App extends React.Component {
       <button onClick={this.addTodo}>Add Todo</button>
       <ul>
       {todos.map((val,index) => {
-        return  <li key={index}>{val}
-        <button onClick={() => this.editTodo(index)}>Edit</button>
+        return  <li key={index}>
+        {val.edit? <input type="text" value={val.title} onChange={(e)=>this.handleChange(e,index)}/> : val.title}
+        {val.edit?
+        <button onClick={() => this.updateTodo(index)}>Update</button>
+        :
+        <button onClick={() => this.editTodo(index)}>Edit</button>}
         <button onClick={() => this.deleteTodo(index)}>Delete</button>
         </li>     
       })}
