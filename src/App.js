@@ -22,6 +22,9 @@ class App extends React.Component {
       todos: this.state.todos
     })
   }
+  editTodo = (index) => {
+    console.log("this is edit")
+  }
 
   render(){
     let {todos, value} = this.state;
@@ -32,6 +35,7 @@ class App extends React.Component {
       <ul>
       {todos.map((val,index) => {
         return  <li key={index}>{val}
+        <button onClick={() => this.editTodo(index)}>Edit</button>
         <button onClick={() => this.deleteTodo(index)}>Delete</button>
         </li>     
       })}
