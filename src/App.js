@@ -64,11 +64,11 @@ class App extends React.Component {
         <hr></hr>
         <div className="row">
           <div className="col-12">
-            <ul>
+            <ul className="menu">
             {todos.map((val,index) => {
               return  <li key={index}>
-                <div className="col-6">
-                  {val.edit ? <div className="input-control"><input type="text" className="text-success input-success" value={val.title} onChange={(e)=>this.handleChange(e,index)}/></div> : val.title}
+                <div className="col-6 todolist-item">
+                  {val.edit ? <div className="input-control input-focused"><input type="text" className="text-success input-success" value={val.title} onChange={(e)=>this.handleChange(e,index)}/></div> : val.title}
                 </div>
                 <div className="col-6">
                   <div className="col-5">
