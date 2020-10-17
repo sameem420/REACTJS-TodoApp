@@ -67,13 +67,15 @@ class App extends React.Component {
             <ul>
             {todos.map((val,index) => {
               return  <li key={index}>
-              {val.edit ? <div className="input-control"><input type="text" className="text-success input-success" value={val.title} onChange={(e)=>this.handleChange(e,index)}/></div> : val.title}
-              <br/>
-              {val.edit ?
-              <button className="btn-success" onClick={() => this.updateTodo(index)}>Update</button>
-              :
-              <button className="btn-link" onClick={() => this.editTodo(index)}>Edit</button>}
-              <button className="btn-danger" onClick={() => this.deleteTodo(index)}>Delete</button>
+                <div>
+                  {val.edit ? <div className="input-control"><input type="text" className="text-success input-success" value={val.title} onChange={(e)=>this.handleChange(e,index)}/></div> : val.title}
+                  <br/>
+                  {val.edit ?
+                  <button className="btn-success" onClick={() => this.updateTodo(index)}>Update</button>
+                  :
+                  <button className="btn-link" onClick={() => this.editTodo(index)}>Edit</button>}
+                  <button className="btn-danger" onClick={() => this.deleteTodo(index)}>Delete</button>
+                </div>
               </li>     
             })}
             </ul>
