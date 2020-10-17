@@ -64,10 +64,10 @@ class App extends React.Component {
         <hr></hr>
         <div className="row">
           <div class="col-12">
-            <ol>
+            <ul>
             {todos.map((val,index) => {
               return  <li key={index}>
-              {val.edit ? <div class="input-control"><input type="text" className="text-success input-success" value={val.title} onChange={(e)=>this.handleChange(e,index)}/></div> : val.title}
+              {val.edit ? <div className="input-control"><input type="text" className="text-success input-success" value={val.title} onChange={(e)=>this.handleChange(e,index)}/></div> : val.title}
               <br/>
               {val.edit ?
               <button className="btn-success" onClick={() => this.updateTodo(index)}>Update</button>
@@ -76,7 +76,7 @@ class App extends React.Component {
               <button className="btn-danger" onClick={() => this.deleteTodo(index)}>Delete</button>
               </li>     
             })}
-            </ol>
+            </ul>
           </div>
         </div>
       </div>
