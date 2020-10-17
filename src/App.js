@@ -63,18 +63,23 @@ class App extends React.Component {
         </div>
         <hr></hr>
         <div className="row">
-          <div class="col-12">
+          <div className="col-12">
             <ul>
             {todos.map((val,index) => {
               return  <li key={index}>
-                <div>
+                <div className="col-6">
                   {val.edit ? <div className="input-control"><input type="text" className="text-success input-success" value={val.title} onChange={(e)=>this.handleChange(e,index)}/></div> : val.title}
-                  <br/>
+                </div>
+                <div className="col-6">
+                  <div className="col-5">
                   {val.edit ?
-                  <button className="btn-success" onClick={() => this.updateTodo(index)}>Update</button>
-                  :
-                  <button className="btn-link" onClick={() => this.editTodo(index)}>Edit</button>}
-                  <button className="btn-danger" onClick={() => this.deleteTodo(index)}>Delete</button>
+                    <button className="btn-success" onClick={() => this.updateTodo(index)}>Update</button>
+                    :
+                    <button className="btn-link" onClick={() => this.editTodo(index)}>Edit</button>}
+                  </div>
+                  <div className="col-5">
+                    <button className="btn-danger" onClick={() => this.deleteTodo(index)}>Delete</button>
+                  </div>
                 </div>
               </li>     
             })}
