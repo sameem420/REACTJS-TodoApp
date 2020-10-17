@@ -68,7 +68,7 @@ class App extends React.Component {
             {todos.map((val,index) => {
               return  <li key={index}>
                 <div className="col-6 todolist-item">
-                  {val.edit ? <div className="input-control input-focused"><input type="text" className="text-success input-success" value={val.title} onChange={(e)=>this.handleChange(e,index)}/></div> : val.title}
+                  {val.edit ? <div className="input-control"><input type="text" className="text-success input-success" value={val.title} onChange={(e)=>this.handleChange(e,index)}/></div> : val.title}
                 </div>
                 <div className="col-6">
                   <div className="col-5">
