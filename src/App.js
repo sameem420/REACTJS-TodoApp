@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
 import 'cirrus-ui';
+import delIcon from './assets/images/delete.png';
+import editIcon from './assets/images/edit.png';
+import updatedIcon from './assets/images/updated.png';
 
 class App extends React.Component {
   constructor() {
@@ -67,18 +70,18 @@ class App extends React.Component {
             <ul className="menu">
             {todos.map((val,index) => {
               return  <li key={index}>
-                <div className="col-6 todolist-item">
+                <div className="col-7 todolist-item">
                   {val.edit ? <div className="input-control"><input type="text" className="text-success input-success" value={val.title} onChange={(e)=>this.handleChange(e,index)}/></div> : val.title}
                 </div>
-                <div className="col-6">
-                  <div className="col-5">
+                <div className="col-4">
+                  <div className="col-6">
                   {val.edit ?
-                    <button className="btn-success" onClick={() => this.updateTodo(index)}>Update</button>
+                    <button className="btn" onClick={() => this.updateTodo(index)}><img src={updatedIcon} id="delicon" /></button>
                     :
-                    <button className="btn-link" onClick={() => this.editTodo(index)}>Edit</button>}
+                    <button className="btn" onClick={() => this.editTodo(index)}><img src={editIcon} id="delicon" /></button>}
                   </div>
-                  <div className="col-5">
-                    <button className="btn-danger" onClick={() => this.deleteTodo(index)}>Delete</button>
+                  <div className="col-6">
+                    <button className="btn" onClick={() => this.deleteTodo(index)}><img src={delIcon} id="delicon" /></button>
                   </div>
                 </div>
               </li>     

@@ -15,4 +15,14 @@ hr {
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
   border-radius: 10px;
+  margin-top: 5px;
+  height: 60px;
+  text-align: center;
+}
+#delicon {
+  text-align: center;
+}
+.btn {
+  height: 40px;
+  margin-top: 18px;
 }
