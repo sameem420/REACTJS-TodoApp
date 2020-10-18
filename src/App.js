@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import 'cirrus-ui';
+import deleteIcon from './close.png';
 
 class App extends React.Component {
   constructor() {
@@ -78,7 +79,7 @@ class App extends React.Component {
                     <button className="btn-link" onClick={() => this.editTodo(index)}>Edit</button>}
                   </div>
                   <div className="col-5">
-                    <button className="btn-danger" onClick={() => this.deleteTodo(index)}>Delete</button>
+                    <button className="btn-danger" onClick={() => this.deleteTodo(index)}><img src={deleteIcon} alt="delete icon"/>Delete</button>
                   </div>
                 </div>
               </li>     
