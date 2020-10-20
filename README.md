@@ -1,6 +1,7 @@
 # REACTJS-TodoApp
 ### Todo Application in ReactJS using state, setState
 
+<hr/>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
@@ -86,5 +87,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
+<hr/>
 
 ### &copy; 2020 Developed By Muhammad Sameem
