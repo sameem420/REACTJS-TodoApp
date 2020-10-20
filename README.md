@@ -1,5 +1,9 @@
 # REACTJS-TodoApp
-### Todo Application in ReactJS using state, setState
+### Todo Web App in ReactJS using state, setState
+
+* Add Todo
+* Edit/Update Todo
+* Delete Todo
 
 <hr/>
 
