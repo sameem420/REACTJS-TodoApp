@@ -52,6 +52,7 @@ class App extends React.Component {
     let {todos, value} = this.state;
   return (
     <div>
+      <h1>Todo App</h1>
       <div className="container">
         <div className="row wrapper">
             <div className="col s12 center">

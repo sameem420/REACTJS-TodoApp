@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 * {
   box-sizing: border-box;
-  
+}
+h1 {
+  font-family: 'Kaushan Script', sans-serif;
+  text-align: center;
 }
 .wrapper {
   margin-top: 10px;
