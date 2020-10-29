@@ -12,10 +12,9 @@ class App extends React.Component {
     this.state = {
       todos : [],
       value : '',
-      
     }
   }
-
+  // Add Todo Function
   addTodo = () => {
     let val = {title: this.state.value}
     this.setState({
@@ -23,26 +22,33 @@ class App extends React.Component {
       value: ''
     })
   }
+  // Delete Todo Function
   deleteTodo = (index) => {
     this.state.todos.splice(index,1)
     this.setState({
       todos: this.state.todos
     })
   }
+  // Edit Todo Function
   editTodo = (index) => {
-    this.state.todos[index].edit = true;
+    const prevState = this.state;
+    prevState.todos[index].edit = true;
     this.setState({
       todos: this.state.todos
     })
   }
-  handleChange = (e,index) => {
-    this.state.todos[index].title = e.target.value;
-    this.setState({
-      todos: this.state.todos
-    })
-  }
+  // UpdateTodo Function
   updateTodo = (index) => {
-    this.state.todos[index].edit = false;
+    const prevState = this.state;
+    prevState.todos[index].edit = false;
+    this.setState({
+      todos: this.state.todos
+    })
+  }
+  // Handle Change Function
+  handleChange = (e,index) => {
+    const prevState = this.state;
+    prevState.todos[index].title = e.target.value;
     this.setState({
       todos: this.state.todos
     })
