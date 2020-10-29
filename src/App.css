@@ -1,28 +1,37 @@
 * {
   box-sizing: border-box;
+  
 }
 .wrapper {
-  margin: 0 auto;
-  width: 50%;
-  border: 1px solid grey;
-  border-radius: 10px;
+  margin-top: 10px;
+  border: 1px solid white;
+  border-bottom-right-radius: 50px;
+  height: 80px;
 }
-hr {
-  width: 80%;
-  margin: auto;
+.input-field >label {
+  margin-top: 10px;
+}
+#new-todo {
+  margin-top: 10px;
+}
+.btnAddTodo {
+  background-image: radial-gradient( circle farthest-corner at -4% -12.9%,  rgba(74,98,110,1) 0.3%, rgba(30,33,48,1) 90.2% );
+  width: 120px;
+  margin-top: 20px;
 }
 .todolist-item {
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
+  margin: auto;
+  border-top: 1px solid white;
+  border-bottom: 1px solid whitesmoke;
   border-radius: 10px;
   margin-top: 5px;
   height: 60px;
   text-align: center;
 }
+.buttons {
+  margin-top: 20px;
+}
 #delicon {
   text-align: center;
-}
-.btn {
-  height: 40px;
-  margin-top: 18px;
+  background-color: rgba(233, 210, 210, 0.075);
 }

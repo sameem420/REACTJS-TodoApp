@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import 'cirrus-ui';
+import 'materialize-css';
+import 'materialize-css/dist/css/materialize.min.css';
 import delIcon from './assets/images/delete.png';
 import editIcon from './assets/images/edit.png';
 import updatedIcon from './assets/images/updated.png';
@@ -51,37 +52,35 @@ class App extends React.Component {
     let {todos, value} = this.state;
   return (
     <div>
-      <div className="wrapper">
-        <div className="row">
-            <div className="col-8">
-              <div className="input-control">
+      <div className="container">
+        <div className="row wrapper">
+            <div className="col s12 center">
+              <div className="col s7 input-field">
                 <input type="text" value={value} onChange={(e) => this.setState({value: e.target.value})} id="new-todo"/>
-              </div>
-            </div>
-            <div className="col-4">
-              <div className="input-control">
-                <button className="btn-dark" onClick={this.addTodo}>Add Todo</button>
+                <label for="new-todo">Enter something To-do</label>
+              </div>  
+              <div className="col s5">
+                <button className="btn waves-effect waves-teal btnAddTodo" onClick={this.addTodo}>Add Todo</button>
               </div>
             </div>
         </div>
-        <hr></hr>
-        <div className="row">
-          <div className="col-12">
-            <ul className="menu">
+        <div>
+          <div className="row">
+            <ul>
             {todos.map((val,index) => {
               return  <li key={index}>
-                <div className="col-7 todolist-item">
-                  {val.edit ? <div className="input-control"><input type="text" className="text-success input-success" value={val.title} onChange={(e)=>this.handleChange(e,index)}/></div> : val.title}
+                <div className="col s8 todolist-item">
+                  {val.edit ? <div><input type="text"  value={val.title} onChange={(e)=>this.handleChange(e,index)}/></div> : val.title}
                 </div>
-                <div className="col-4">
-                  <div className="col-6">
+                <div className="col s4 buttons">
+                  <div className="col s6">
                   {val.edit ?
-                    <button className="btn" onClick={() => this.updateTodo(index)}><img src={updatedIcon} id="delicon" /></button>
+                    <button className="btn-flat waves-light " onClick={() => this.updateTodo(index)}><img src={updatedIcon} alt="Update Icon" id="delicon" /></button>
                     :
-                    <button className="btn" onClick={() => this.editTodo(index)}><img src={editIcon} id="delicon" /></button>}
+                    <button className="btn-flat waves-light" onClick={() => this.editTodo(index)}><img src={editIcon} alt="Edit Icon" id="delicon" /></button>}
                   </div>
-                  <div className="col-6">
-                    <button className="btn" onClick={() => this.deleteTodo(index)}><img src={delIcon} id="delicon" /></button>
+                  <div className="col s6">
+                    <button className="btn-flat waves-light" onClick={() => this.deleteTodo(index)}><img src={delIcon} alt="Delete Icon" id="delicon" /></button>
                   </div>
                 </div>
               </li>     
