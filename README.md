@@ -1,9 +1,16 @@
 # REACTJS-TodoApp
-### Todo Web App in ReactJS using state, setState
+### Todo Web App Developed in ReactJS (using state, setState)
+
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
 * Add Todo
 * Edit/Update Todo
 * Delete Todo
+
+<hr/>
+
+| [GitHub DEMO](https://sameem420.github.io/REACTTodoApp/) | [Firebase DEMO](https://sameem420.github.io/JS-ExpenseTrackerApp/) |
+| :-------------: |:-------------:|
 
 <hr/>
 
